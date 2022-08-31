@@ -40,7 +40,6 @@ header{
     color:var(--sidebar-font-color);
     padding: 0 1em;
 }
-
 .logo{
     position:relative;
     padding: 2em;
@@ -57,21 +56,23 @@ header{
     font-size: 20px;
     font-weight: bolder;
 }
-
 .primary-links>li, .secondary-links>li{
     display:flex;
     gap:1em;
     width:15em;
 }
-
 .primary-links>li>svg, .secondary-links>li>svg{
     position:relative;
     top:0.6em;
 }
-
-.primary-links>li:hover p{
-    box-shadow: 0 0 5px black;
+.primary-links>li:hover p,.secondary-links>li:hover p{
     font-size: 24px;
+    cursor:pointer;
+}
+.primary-links>li:hover>svg,.secondary-links>li:hover>svg
+{
+    width:40px !important;
+    height:40px !important;
 }
 /* Main Content */
 .container{

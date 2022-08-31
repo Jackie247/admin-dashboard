@@ -14,10 +14,7 @@ html,body{
     grid-template-rows: 1fr 5fr;
     height:100vh;
     width:100vw;
-}
-@font-face {
-    font-family: ;
-    src: url();
+    font-family:"Noto Sans",Arial, Helvetica, sans-serif;
 }
 /* Header */
 header{
@@ -41,10 +38,14 @@ header{
     grid-row:1/-1;
     background-color: var(--sidebar-bg);
     color:var(--sidebar-font-color);
-    font-weight: bolder;
-}
-.logo{
     padding: 0 1em;
+}
+
+.logo{
+    position:relative;
+    padding: 2em;
+    padding-bottom:0;
+    box-shadow: 0 6px 5px -6px var(--accents);
 }
 .logo>svg{
     position:relative;
@@ -53,13 +54,14 @@ header{
 .links{
     display:flex;
     flex-flow:column;
+    font-size: 20px;
+    font-weight: bolder;
 }
-.primary-links{
-    height:40vh;
-}
+
 .primary-links>li, .secondary-links>li{
     display:flex;
     gap:1em;
+    width:15em;
 }
 
 .primary-links>li>svg, .secondary-links>li>svg{
@@ -67,6 +69,10 @@ header{
     top:0.6em;
 }
 
+.primary-links>li:hover p{
+    box-shadow: 0 0 5px black;
+    font-size: 24px;
+}
 /* Main Content */
 .container{
     display:grid;

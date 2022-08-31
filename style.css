@@ -1,6 +1,7 @@
 :root{
     --header-bg: #fafaf9;
-    --background-color:#f1f5f9;
+    --accents:#e7e5e4;
+    --background-color:#e7e5e4;
     --sidebar-bg:#3b82f6;
     --sidebar-font-color:#fff;
 }
@@ -14,17 +15,29 @@ html,body{
     height:100vh;
     width:100vw;
 }
-
+@font-face {
+    font-family: ;
+    src: url();
+}
 /* Header */
 header{
     background-color: var(--header-bg);
     grid-column: 2/-1;
 }
+.top-strip{
+    padding:1em;
+}
+.top-strip>input{
+    border:none;
+    border-radius:1em;
+    background-color: var(--accents);
+    width:clamp(200px,40vw,1000px);
+    height:25px;
+}
 /* Sidebar */
 .sidebar{
     display:grid;
-    grid-template-rows: 1fr 9fr ;
-    grid-column: 1/2;
+    grid-template-rows: 1fr 10fr ;
     grid-row:1/-1;
     background-color: var(--sidebar-bg);
     color:var(--sidebar-font-color);
@@ -37,23 +50,23 @@ header{
     position:relative;
     top:1em;
 }
-.sidebar>ul, .sidebar>ul>li>svg{
-    list-style: none;
-    padding:0 1em;
+.links{
+    display:flex;
+    flex-flow:column;
 }
-.sidebar>ul>li{
-    height:40px;
-    align-items:center;
-    justify-self: center;
+.primary-links{
+    height:40vh;
 }
-.sidebar>ul>li>svg{
+.primary-links>li, .secondary-links>li{
+    display:flex;
+    gap:1em;
+}
+
+.primary-links>li>svg, .secondary-links>li>svg{
     position:relative;
-    top:0.5em;
+    top:0.6em;
 }
-.sidebar>ul>li>p{
-    position:relative;
-    top:0.25em;
-}
+
 /* Main Content */
 .container{
     display:grid;

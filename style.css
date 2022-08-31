@@ -30,13 +30,29 @@ header{
     color:var(--sidebar-font-color);
     font-weight: bolder;
 }
+.logo{
+    padding: 0 1em;
+}
+.logo>svg{
+    position:relative;
+    top:1em;
+}
 .sidebar>ul, .sidebar>ul>li>svg{
     list-style: none;
     padding:0 1em;
 }
+.sidebar>ul>li{
+    height:40px;
+    align-items:center;
+    justify-self: center;
+}
 .sidebar>ul>li>svg{
     position:relative;
     top:0.5em;
+}
+.sidebar>ul>li>p{
+    position:relative;
+    top:0.25em;
 }
 /* Main Content */
 .container{

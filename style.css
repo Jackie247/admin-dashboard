@@ -10,7 +10,7 @@ html,body{
     background-color: var(--background-color);
     display:grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: 1fr 5fr;
     height:100vh;
     width:100vw;
 }
@@ -23,30 +23,45 @@ header{
 /* Sidebar */
 .sidebar{
     display:grid;
+    grid-template-rows: 1fr 9fr ;
     grid-column: 1/2;
     grid-row:1/-1;
     background-color: var(--sidebar-bg);
     color:var(--sidebar-font-color);
+    font-weight: bolder;
+}
+.sidebar>ul, .sidebar>ul>li>svg{
+    list-style: none;
+    padding:0 1em;
+}
+.sidebar>ul>li>svg{
+    position:relative;
+    top:0.5em;
 }
 /* Main Content */
 .container{
     display:grid;
     grid-template-columns: 4fr 1fr;
-
-
 }
 .article{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(150px,250px));
     grid-column:1/3;
     gap:10px;
+    border:5px solid black;
 }
 .article .card{
     background-color: #fff;
-    border:5px solid black;
+    border:5px solid red;
+
 }
 .announcements{
     display:grid;
     grid-template-rows: 1fr 1fr;
     grid-column:3/4;
+    border:5px solid black;
+}
+
+.announcements .card{
+    border:5px solid red;
 }

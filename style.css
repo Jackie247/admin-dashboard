@@ -22,20 +22,20 @@ header{
     grid-column: 2/-1;
     padding:2em 2em;
 }
-.top-strip,.account{
+/* Top Strip Header */
+.top-strip,.top-strip>.account, .bot-strip{
     display:flex;
     padding:1em;
     gap:20px;
     align-items: center;
-
 }
 .top-strip>input{
     position:relative;
     border:none;
     border-radius:1em;
     background-color: var(--accents);
-    width:clamp(200px,40vw,1000px);
-    height:25px;
+    width:clamp(200px,42.5vw,1000px);
+    height:35px;
 }
 .account{
     position: absolute;
@@ -44,6 +44,26 @@ header{
 .account *{
     margin:0.75em;
 }
+.buttons{
+    position:absolute;
+    right:4em;
+    top:8em;
+}
+.bot-strip>.buttons>button{
+    background-color:var(--sidebar-bg);
+    border:none;
+    border-radius:4em;
+    color:#fff;
+    width:125px;
+    height:60px;
+    margin:1.5em;
+
+}
+.bot-strip h2{
+    margin:0;
+    font-weight:bolder;
+}
+
 /* Sidebar */
 .sidebar{
     display:grid;

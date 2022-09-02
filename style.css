@@ -16,8 +16,14 @@ html,body{
     width:100vw;
     font-family:"Noto Sans",Arial, Helvetica, sans-serif;
 }
+.clickable{
+    transition: all .1s ;
+}
 .clickable:hover{
     cursor:pointer;
+}
+.clickable:active{
+    transform: scale(0.95);
 }
 /* Header */
 header{
@@ -126,13 +132,13 @@ header{
 .article{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    grid-template-rows:clamp(50px,10%,75px) 1fr 1fr;
-    grid-auto-rows:1fr;
+    grid-template-rows:clamp(50px,10%,75px) auto auto;
+    grid-auto-rows:300px;
     grid-column:1/2;
     gap:30px;
     height:100%;
 }
-.article h2,.announce-trending h2{
+.article h2,.announce-trending>h2:first-child{
     grid-column:1/-1;
     margin-top:2em;
     margin-bottom:0;
@@ -143,9 +149,18 @@ header{
     grid-template-rows:1fr auto;
     background-color: #fff;
     border-radius:1em;
+    box-shadow: 5px 5px 5px #888888;
+    overflow:hidden;
+    transition: all .2s ease-in-out;
+}
+.article>.card:hover{
+    transform:scale(1.05);
+    cursor:pointer;
 }
 .card>.text-block{
     padding:20px;
+    font-size: 20px;
+    text-overflow:ellipsis;
 }
 .card>.text-block>h2{
     margin:0;
@@ -161,9 +176,10 @@ header{
 /* Announcements section of main */
 .announce-trending{
     display:grid;
-    grid-template-rows:clamp(50px,10%,75px) 1fr clamp(50px,10%,75px) 1fr;
-    grid-auto-rows:1fr;
+    grid-template-rows:clamp(50px,10%,75px) 1fr 25px 1fr;
+    grid-auto-rows:300px;
     gap:30px;
+    
 }
 .announce>.card{
     display:flex;
@@ -171,9 +187,7 @@ header{
     background-color: #fff;
     border-radius:1em;
     padding:2em;
-}
-.announce>.card>.post{
-
+    border:solid 5px #888888;
 }
 .trending>.users{
     display:flex;
@@ -183,6 +197,10 @@ header{
     padding:1em 2em;
     justify-content: space-between;
     height:80%;
+    border:solid 5px #888888;
+}
+.announce-trending h2{
+    margin:0;
 }
 .user{
     display:grid;

@@ -133,7 +133,7 @@ header{
 .article{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    grid-template-rows:clamp(50px,10%,75px) 1fr 1fr;
+    grid-template-rows:clamp(50px,10%,75px) clamp(300px,50%,400px) clamp(300px,50%,450px);
     grid-auto-rows:300px;
     grid-column:1/2;
     gap:30px;
@@ -147,7 +147,8 @@ header{
 .article>.card{
     display:grid;
     grid-template-columns: 15px 1fr;
-    grid-template-rows:1fr auto;
+    grid-template-rows:1fr 50px;
+    grid-auto-rows: 100px;
     background-color: #fff;
     border-radius:1em;
     box-shadow: 5px 5px 5px #888888;

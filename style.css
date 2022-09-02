@@ -16,6 +16,9 @@ html,body{
     width:100vw;
     font-family:"Noto Sans",Arial, Helvetica, sans-serif;
 }
+.clickable:hover{
+    cursor:pointer;
+}
 /* Header */
 header{
     background-color: var(--header-bg);
